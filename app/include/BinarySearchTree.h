@@ -39,6 +39,9 @@ public:
 
     // delete all nodes from the tree
     void destroyBST (BinaryNode<ItemType>* nodePtr);
+ 
+    // print sameKey
+    void printSameKey(const ItemType &successor);
     
 private:
 
@@ -116,6 +119,20 @@ void BinarySearchTree<ItemType>::destroyBST(BinaryNode<ItemType>* treeRoot)
         destroyBST(treeRoot->getRightPtr());
         
         delete treeRoot;
+    }
+}
+                  
+//Find the multiple targets in BST and print target's informations since there is no duplicates
+template<class ItemType>
+void BinaryTree<ItemType>::printSameKey(const ItemType &target)
+{
+    BinaryNode<ItemType>* found = nullptr;
+ 
+    found = _search(this->rootPtr, target); // get searched and returned node;
+    while (found)
+    {   write Print!! PLEASE!!
+        // ADD Print FUNCTION!!!!@!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        found = _search(found->getRightPtr(), target);
     }
 }
 
